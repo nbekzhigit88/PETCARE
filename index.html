@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETCARE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <button id="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button> 
+ <header>
+    <h2>🐾 PETCARE</h2>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointment">Contact</a>
+    </nav>
+
+    <a href="#appointment">Call Doctor 24/7</a>
+</header>   
+
+<main>
+
+<section id="home">
+    <h1>We provide the best medical care for your beloved pets.</h1>
+    <p>Professional Care for Your Pets</p>
+    <button>Make an Appointment</button>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <article>Therapy</article>
+    <article>Surgery</article>
+    <article>Vaccination</article>
+</section>
+
+<section id="doctors">
+    <h2>Our Doctors</h2>
+    <article>
+        <h3>Dr. Alex Morgan</h3>
+       <img src="dr-alex.png" alt="Dr. Alex">
+        <p>Veterinary Therapist — 5 years</p>
+    </article>
+    <article>
+        <h3>Dr. Salah Wilson</h3>
+        <img src="dr-salah.png" alt="Dr. Salah Wilson">
+        <p>Veterinary Surgeon — 7 years</p>
+    </article>
+    <article>
+        <h3>Dr. James Brown</h3>
+        <img src="dr-james.png" alt="Dr. James Brown">
+        <p>Veterinary Specialist — 6 years</p>
+    </article>
+</section>
+
+<section id="about">
+    <h2>Make an Appointment</h2>
+    <section id="appointment">
+    <h2>Book an Appointment</h2>
+    <form>
+        <input type="text" placeholder="Pet's Name" required>
+        <input type="text" placeholder="Pet Species" required>
+        <input type="tel" placeholder="Owner's Phone" required>
+        <input type="email" placeholder="Owner's Email" required>
+        <input type="date" required>
+        <button type="submit">Book now</button>
+    </form>
+</section>
+
+</main>
+
+<footer id="contact">
+    <p>Almaty, Kazakhstan</p>
+    <p>Working hours: 09:00–21:00</p>
+    <p>© 2026 PETCARE</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("active");
+}
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+
+    const btn = document.getElementById("theme-btn");
+
+    if (document.body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️ Light Mode";
+    } else {
+        btn.textContent = "🌙 Dark Mode";
+    }
+}
+</script>
+</body>
+</html>
